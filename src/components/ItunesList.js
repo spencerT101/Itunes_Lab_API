@@ -1,12 +1,12 @@
 import React from 'react';
-import ItunesItem from "./ItunesItem"
+import ItunesItem from "./ItunesItem";
 
 
 
 const ItunesList = ({itunes}) => {
 
     const itunesItems = itunes.map((itune, index) => {
-        return <ItunesItem itune = {itune} key = {index}/>
+        return <ItunesItem itune={itune} key={index}/>
     })
 
     return(
@@ -17,4 +17,4 @@ const ItunesList = ({itunes}) => {
 }
 
 
-export default ItunesList
+export default ItunesList;

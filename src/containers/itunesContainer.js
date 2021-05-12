@@ -13,9 +13,9 @@ const ItunesContainer = () =>{
     }, [])
 
     const getItunes = function(){
-        fetch('https://itunes.apple.com/gb/rss/topsongs/limit=20/json')
+        fetch('https://itunes.apple.com/gb/rss/topsongs/limit=40/json')
         .then(res => res.json())
-        .then(itunes => setItunes(itunes))
+        .then(itunes => setItunes(itunes.feed.entry))
     }
 
     return(
