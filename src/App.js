@@ -1,5 +1,5 @@
 import React from 'react'
-import itunesContainer from "./containers/itunesContainer";
+import itunesContainer from "./containers/ItunesContainer";
 import './App.css';
 
 function App() {

@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react';
 
 
-const itunesContainer = () =>{
+
+const ItunesContainer = () =>{
     const [itunes, setItunes] = useState([])
 
 
@@ -9,7 +10,19 @@ const itunesContainer = () =>{
     useEffect(() => {
         getItunes();
     }, [])
-    
+
+    const getItunes = function(){
+        fetch('https://itunes.apple.com/gb/rss/topsongs/limit=20/json')
+        .then(res => res.json())
+        .then(itunes => setItunes(itunes))
+    }
+
+    return(
+        <div class = "container">
+            <ItunesList itunes={itunes}/>
+        </div>
+    )
+
 }
 
 
@@ -19,4 +32,4 @@ const itunesContainer = () =>{
 
 
 
-export default 
+export default ItunesContainer;
