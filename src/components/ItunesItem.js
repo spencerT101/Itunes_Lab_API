@@ -3,7 +3,7 @@ import React from 'react';
 
 const ItunesItem = ({itune}) => {
 
-    return <li>{itune['im:name'].label}</li>
+    return <li><h2>{itune['im:name'].label}</h2>{itune['im:artist'].label}{itune.category['im:id']}</li>
 }
 
 
